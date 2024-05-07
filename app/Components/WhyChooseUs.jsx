@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const WhyChooseUs = () => {
   return (
-      <div className="relative flex flex-col lg:flex-row items-center justify-center mt-10 mb-40 px-40" style={{ backgroundImage: "url('/bg2.png')" }}>
+      <div className="relative flex flex-col lg:flex-row items-center justify-center mt-10 mb-40 lg:px-40 px-4" style={{ backgroundImage: "url('/bg2.png')" }}>
         {/* Left side: Image */}
         <div className="lg:w-1/2 lg:mr-8">
           <img
@@ -16,7 +16,7 @@ const WhyChooseUs = () => {
           />
         </div>
         {/* Right side: Text */}
-        <div className="lg:w-1/2 mt-8 lg:mt-0 px-10">
+        <div className="lg:w-1/2 mt-8 lg:mt-0 lg:px-10 px-0">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
             Why You Should Choose Our Driving School?
           </h2>
@@ -26,7 +26,7 @@ const WhyChooseUs = () => {
             with expert instruction. Start your driving journey with us today!
           </p>
           <div className="mb-6">
-            <h3 className="text-xl font-semibold mb-2">Our Advantages:</h3>
+            <h3 className="text-xl font-semibold mb-2">Our Advantages</h3>
             <ul className="list-disc list-inside">
               <li className="flex items-center gap-4">
                 <TbCube />

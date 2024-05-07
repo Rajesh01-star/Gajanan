@@ -1,11 +1,8 @@
 // component imports
-
-import Navbar from "../Components/Navbar";
 import ServicesSection from "../Components/ServicesSection";
-export default function Home() {
+export default function Services() {
   return (
     <main>
-      <Navbar />
       <ServicesSection />
     </main>
   );

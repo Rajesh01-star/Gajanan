@@ -1,9 +1,7 @@
 // component imports
-import Navbar from "../Components/Navbar";
-export default function Home() {
+export default function About() {
   return (
     <main>
-      <Navbar />
     </main>
   );
 }

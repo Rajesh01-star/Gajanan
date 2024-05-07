@@ -3,21 +3,21 @@ import PointerCard from "./PointerCard";
 
 const PointersSection = () => {
   return (
-    <div className="flex flex-col sm:flex-row gap-8 lg:gap-24 lg:my-40 my-20 lg:px-40 px-10 border border-black justify-center items-center">
+    <div className="flex flex-col sm:flex-row gap-8 lg:gap-24 lg:my-40 my-20 lg:px-40 px-4 justify-center items-center lg:h-40 h-[30rem] overflow-hidden">
       <PointerCard
-        icon={<FaCar size={32} color="#fff" />}
+        icon={<FaCar size={28} color="#fff" />}
         title="Modern Vehicles"
-        description="We offer training with the latest model vehicles equipped with advanced safety features."
+        description="We offer training with the latest model vehicles with advanced safety features."
       />
       <PointerCard
-        icon={<FaCheckCircle size={32} color="#fff" />}
+        icon={<FaCheckCircle size={28} color="#fff" />}
         title="Certified Instructors"
-        description="Our instructors are certified professionals with extensive experience and a passion for teaching, ensuring top-quality instruction."
+        description="Our instructors are certified professionals with extensive experience."
       />
       <PointerCard
-        icon={<FaUser size={32} color="#fff" />}
+        icon={<FaUser size={28} color="#fff" />}
         title="Personalized Learning"
-        description="We tailor our instruction to meet the unique needs and learning styles of each student."
+        description="We tailor our instruction to meet the unique needs of each student."
       />
     </div>
   );
