@@ -10,7 +10,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#18181E] text-white py-8 pb-0">
+    <footer className="relative bottom-0 w-full bg-[#18181E] text-white py-8">
       <div className="container mx-auto lg:w-[1140px] px-4">
         <div className="flex flex-wrap items-center justify-between pb-10 border-b-[1px] border-[#373745]">
           {/* Logo */}
@@ -130,19 +130,19 @@ const Footer = () => {
           <div className="flex flex-col justify-center items-start lg:w-1/3 ">
             <div className="flex items-center mb-2">
               <span className="mr-4">
-                <LocationIcon color="red"/>
+                <LocationIcon color="red" />
               </span>
               <p>F1/F3-02, ID.Market, Bhubaneswar</p>
             </div>
             <div className="flex items-center mb-2">
               <span className="mr-4">
-                <MobileIcon color="red"/>
+                <MobileIcon color="red" />
               </span>
               <p>(+91) 9937552281</p>
             </div>
             <div className="flex items-center">
               <span className="mr-4">
-                <EmailIcon color="red"/>
+                <EmailIcon color="red" />
               </span>
               <p>gajanana.driving@gmail.com</p>
             </div>
