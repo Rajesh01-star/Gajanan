@@ -3,7 +3,7 @@
 const HeroSection = () => {
   return (
     <div
-      className="flex flex-col lg:flex-row items-center justify-center mt-10 sm:mt-1 bg-cover bg-center"
+      className="flex flex-col lg:flex-row items-center justify-center bg-cover bg-center"
       style={{ backgroundImage: "url('/cover.png')" }}
     >
       {/* Left side: Hero content */}

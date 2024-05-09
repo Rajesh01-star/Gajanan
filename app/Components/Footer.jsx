@@ -10,7 +10,7 @@ import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className="relative bottom-0 w-full bg-[#18181E] text-white py-8">
+    <footer className="relative bottom-0 w-full bg-[#18181E] text-white pt-8 lg:mt-40 mt-20">
       <div className="container mx-auto lg:w-[1140px] px-4">
         <div className="flex flex-wrap items-center justify-between pb-10 border-b-[1px] border-[#373745]">
           {/* Logo */}

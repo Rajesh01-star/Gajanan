@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const WhyChooseUs = () => {
   return (
-      <div className="relative flex flex-col lg:flex-row items-center justify-center mt-10 mb-40 lg:px-40 px-4" style={{ backgroundImage: "url('/bg2.png')" }}>
+      <div className="relative flex flex-col lg:flex-row items-center justify-center lg:mt-40 mt-20 lg:px-40 px-4" style={{ backgroundImage: "url('/bg2.png')" }}>
         {/* Left side: Image */}
         <div className="lg:w-1/2 lg:mr-8">
           <img
