@@ -1,5 +1,6 @@
 // component imports
 import CourseOptionsSection from "./Components/CourseOptionsSection";
+import FAQSection from "./Components/FAQSection";
 import HeroSection from "./Components/HeroSection";
 import PointersSection from "./Components/PointerSection";
 import TestimonialSection from "./Components/TestimonialSection";
@@ -12,6 +13,7 @@ export default function Home() {
       <WhyChooseUs />
       <CourseOptionsSection />
       <TestimonialSection />
+      <FAQSection />
     </main>
   );
 }
