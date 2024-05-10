@@ -49,6 +49,7 @@ const Navbar = () => {
               href="/"
               passHref
               className="block mt-4 lg:inline-block lg:mt-0 text-white lg:text-gray-800 hover:text-red-600 mr-10 border-b border-white lg:border-none"
+              onClick={toggleMenu}
             >
               Home
             </Link>
@@ -56,6 +57,7 @@ const Navbar = () => {
               href="/about"
               passHref
               className="block mt-4 lg:inline-block lg:mt-0 text-white lg:text-gray-800 hover:text-red-600 mr-10 border-b border-transparent lg:border-none"
+              onClick={toggleMenu}
             >
               About
             </Link>
@@ -63,6 +65,7 @@ const Navbar = () => {
               href="/services"
               passHref
               className="block mt-4 lg:inline-block lg:mt-0 text-white lg:text-gray-800 hover:text-red-600 mr-10 border-b border-transparent lg:border-none"
+              onClick={toggleMenu}
             >
               Service
             </Link>
@@ -70,6 +73,7 @@ const Navbar = () => {
               href="/testimonials"
               passHref
               className="block mt-4 lg:inline-block lg:mt-0 text-white lg:text-gray-800 hover:text-red-600 mr-10 border-b border-transparent lg:border-none"
+              onClick={toggleMenu}
             >
               Testimonials
             </Link>
@@ -77,6 +81,7 @@ const Navbar = () => {
               href="/contact"
               passHref
               className="block mt-4 lg:inline-block lg:mt-0 text-white lg:text-gray-800 hover:text-red-600 mr-10 border-b border-transparent lg:border-none"
+              onClick={toggleMenu}
             >
               Contact
             </Link>
@@ -87,6 +92,7 @@ const Navbar = () => {
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block text-md font-medium px-4 py-2 leading-none bg-gray-200 rounded mt-4 lg:mt-0"
+              onClick={toggleMenu}
             >
               <FaWhatsapp color="#ff5757" />
             </Link>

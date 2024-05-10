@@ -52,9 +52,14 @@ const TestimonialSection = () => {
 
   return (
     <section
-      className="bg-gray-100 lg:mt-40 mt-20 lg:p-20 py-20 px-4 bg-no-repeat bg-right-bottom"
+      className="bg-gray-100 mt-10 lg:p-20 py-20 px-4 bg-no-repeat bg-right-bottom"
       style={{ backgroundImage: "url('/testimonialBg.png')" }}
     >
+      <div className="text-center mb-10">
+        <h2 className="text-3xl font-semibold">
+        What our students are saying?
+        </h2>
+      </div>
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto relative">
           {/* Testimonial Card */}

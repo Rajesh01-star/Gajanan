@@ -32,7 +32,7 @@ const CourseOptionCard = ({ imageUrl, title, description, price }) => {
 
 const CourseOptionsSection = () => {
   return (
-    <section className="lg:mt-40 mt-20">
+    <section className="mt-10">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-semibold">

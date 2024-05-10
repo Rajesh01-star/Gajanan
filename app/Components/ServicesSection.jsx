@@ -6,7 +6,6 @@ const ServicesSection = () => {
   return (
     <section className="mt-10 py-16 bg-gray-100">
       <div className="container mx-auto px-4 flex flex-col items-center">
-        <h4 className="text-sm text-center mb-4 font-semibold">Our Services</h4>
         <h2 className="w-full md:w-1/4 text-3xl font-bold text-center mb-12">
           We’re Offering the Best Services to You
         </h2>
