@@ -40,7 +40,7 @@ const Footer = () => {
             <div className="mb-4 w-full md:w-auto">
               <ul className="mr-8 md:mr-0 text-[#6D7076]">
                 <li className="mb-2">
-                  <Link href="/home" className="hover:text-red-600">
+                  <Link href="/" className="hover:text-red-600">
                     Home
                   </Link>
                 </li>
@@ -64,12 +64,12 @@ const Footer = () => {
             <div className="mb-4 w-full md:w-auto">
               <ul className="mr-8 md:mr-0 text-[#6D7076]">
                 <li className="mb-2">
-                  <Link href="/testimonials" className="hover:text-red-600">
+                  <Link href="/about" className="hover:text-red-600">
                     Testimonials
                   </Link>
                 </li>
                 <li className="mb-2">
-                  <Link href="/faqs" className="hover:text-red-600">
+                  <Link href="/services" className="hover:text-red-600">
                     FAQs
                   </Link>
                 </li>

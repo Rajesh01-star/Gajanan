@@ -52,7 +52,7 @@ const TestimonialSection = () => {
 
   return (
     <section
-      className="bg-gray-100 mt-10 lg:p-20 py-20 px-4 bg-no-repeat bg-right-bottom"
+      className="bg-gray-100 mt-6 lg:p-20 py-20 px-4 bg-no-repeat bg-right-bottom"
       style={{ backgroundImage: "url('/testimonialBg.png')" }}
     >
       <div className="text-center mb-10">

@@ -41,7 +41,7 @@ const FAQSection = () => {
   ];
 
   return (
-    <section className="container mx-auto mt-10 lg:px-40 px-4">
+    <section className="container mx-auto mt-6 lg:px-40 px-4">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
         {/* Left column */}
 
