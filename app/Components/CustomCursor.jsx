@@ -1,6 +1,6 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 const CustomCursor = () => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -10,10 +10,10 @@ const CustomCursor = () => {
       setPosition({ x: e.clientX, y: e.clientY });
     };
 
-    document.addEventListener('mousemove', updateCursorPosition);
+    document.addEventListener("mousemove", updateCursorPosition);
 
     return () => {
-      document.removeEventListener('mousemove', updateCursorPosition);
+      document.removeEventListener("mousemove", updateCursorPosition);
     };
   }, []);
 
@@ -22,7 +22,8 @@ const CustomCursor = () => {
       className="custom-cursor hidden lg:block"
       style={{
         left: `${position.x}px`,
-        top: `${position.y}px`
+        top: `${position.y}px`,
+        transition: "left 0.3s ease, top 0.3s ease", // Add transitions here
       }}
     ></div>
   );

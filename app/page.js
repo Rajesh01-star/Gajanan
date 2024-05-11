@@ -11,9 +11,9 @@ export default function Home() {
     <main>
       <HeroSection />
       <PointersSection />
-      <SubHeading text={"Get to know us"}/>
+      <SubHeading text={"Get to know us"} />
       <WhyChooseUs />
-      <SubHeading text={"Courses available"}/>
+      <SubHeading text={"Courses available"} />
       <CourseOptionsSection />
       <SubHeading text={"Our Testimonials"} />
       <TestimonialSection />
