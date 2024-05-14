@@ -1,35 +1,36 @@
 'use client'
-import React, { useEffect } from "react";
+
+import React from "react";
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import { icon } from "leaflet"; // Import icon from Leaflet
+import { FaMapMarkerAlt } from "react-icons/fa";
+import "leaflet/dist/leaflet.css"; // Import Leaflet CSS
+
+// Create a custom icon using Leaflet's icon method
+const markerIcon = icon({
+  iconUrl: FaMapMarkerAlt,
+  iconSize: [30, 30], // Set the size of the icon
+  iconAnchor: [15, 30], // Set the anchor point of the icon
+});
 
 const MapSection = () => {
-  useEffect(() => {
-    // Load the Google Maps JavaScript API script dynamically
-    const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places`;
-    script.defer = true;
-    document.head.appendChild(script);
-
-    script.onload = () => {
-      // Initialize the map
-      const map = new window.google.maps.Map(document.getElementById("map"), {
-        center: { lat: YOUR_LATITUDE, lng: YOUR_LONGITUDE }, // Update with your center coordinates
-        zoom: 15, // Adjust zoom level as needed
-      });
-
-      // Add marker for your driving center
-      const marker = new window.google.maps.Marker({
-        position: { lat: YOUR_LATITUDE, lng: YOUR_LONGITUDE }, // Update with your center coordinates
-        map: map,
-        title: "Your Driving Center",
-      });
-    };
-
-    return () => {
-      document.head.removeChild(script);
-    };
-  }, []);
-
-  return <div id="map" style={{ height: "400px", width: "100%" }}></div>;
+  return (
+    <div style={{ height: "400px", width: "100%", position: "relative" }}>
+      <MapContainer
+        center={[20.2961, 85.8245]} // Latitude and longitude for Bhubaneswar
+        zoom={12}
+        style={{ height: "100%", width: "100%" }}
+      >
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        />
+        <Marker position={[20.2961, 85.8245]} icon={markerIcon}>
+          <Popup>Our Location</Popup>
+        </Marker>
+      </MapContainer>
+    </div>
+  );
 };
 
 export default MapSection;
