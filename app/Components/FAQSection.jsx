@@ -76,7 +76,7 @@ const FAQSection = () => {
             <div
               key={faq.id}
               className={`p-4 rounded-lg shadow-md cursor-pointer relative overflow-hidden inline-block border-[1px] border-black w-full transition-all ease-in-out duration-700 ${
-                selectedQuestion === faq.id ? "h-32" : "h-16"
+                selectedQuestion === faq.id ? "lg:h-32 h-40" : "lg:h-16 h-20"
               }`}
               onClick={() => setSelectedQuestion(faq.id)}
             >

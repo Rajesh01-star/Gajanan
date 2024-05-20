@@ -39,7 +39,7 @@ const Navbar = () => {
           isOpen ? "block" : "hidden"
         } lg:block flex-grow lg:w-auto`}
       >
-        <section className="lg:flex lg:items-center absolute left-0 top-0 lg:relative z-10 bg-black lg:bg-white w-full lg:w-auto h-full lg:h-auto p-10 lg:p-0 ">
+        <section className="lg:flex lg:items-center fixed left-0 top-0 lg:relative z-10 bg-black lg:bg-white w-full lg:w-auto h-full lg:h-auto p-10 lg:p-0 ">
           <RxCrossCircled
             className="block lg:hidden text-[26px] text-white absolute right-6 top-6 "
             onClick={toggleMenu}
@@ -70,12 +70,12 @@ const Navbar = () => {
               Service
             </Link>
             <Link
-              href="/testimonials"
+              href="/story"
               passHref
               className="block mt-4 lg:inline-block lg:mt-0 text-white lg:text-gray-800 hover:text-red-600 mr-10 border-b border-transparent lg:border-none"
               onClick={toggleMenu}
             >
-              Testimonials
+              Story
             </Link>
             <Link
               href="/contact"

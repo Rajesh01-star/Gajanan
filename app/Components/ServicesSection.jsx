@@ -12,9 +12,9 @@ const ServicesSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Feature 1 */}
           <FeatureCard
-            imageSrc="/service/instructor.jpg"
-            title="Premium Instructor Training"
-            description="Our driving school prides itself on maintaining an elite team of industry-leading instructors, committed to providing top-quality training, guidance, and support."
+            imageSrc="/service/license.jpg"
+            title="Get Your License with Confidence"
+            description="Our driving school offers expert guidance and training for obtaining your driver's license with tailored programs and full support, including LMV, MCWG, and MCWOG licenses."
           />
           {/* Feature 2 */}
           <FeatureCard
@@ -24,9 +24,9 @@ const ServicesSection = () => {
           />
           {/* Feature 3 */}
           <FeatureCard
-            imageSrc="/service/license.jpg"
-            title="Get Your License with Confidence"
-            description="Our driving school offers expert guidance and training for obtaining your driver's license, ensuring a smooth journey with tailored programs and full support."
+            imageSrc="/service/instructor.jpg"
+            title="Premium Instructor Training"
+            description="Our driving school prides itself on maintaining an elite team of industry-leading instructors, committed to providing top-quality training, guidance, and support."
           />
           {/* Feature 4 */}
           <FeatureCard
@@ -45,6 +45,18 @@ const ServicesSection = () => {
             imageSrc="/service/basics.jpg"
             title="Learn Basic Car Maintenance"
             description="In addition to driving skills, our classes cover essential car maintenance tasks like changing tires, ensuring you're equipped with valuable knowledge to handle common roadside situations confidently."
+          />
+          {/* Feature 7 */}
+          <FeatureCard
+            imageSrc="/service/rental.jpg"
+            title="Self-Driven Car Rentals"
+            description="We offer self-driven car rental services, allowing customers to book vehicles without a driver for their privacy and convenience. Enjoy the freedom to drive on your own terms."
+          />
+          {/* Feature 8 */}
+          <FeatureCard
+            imageSrc="/service/logistics.jpg"
+            title="Career & Logistics Services"
+            description="We provide comprehensive career services, including assistance with shifting and logistics. Our team helps you move goods from one place to another efficiently and securely."
           />
         </div>
       </div>

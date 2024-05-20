@@ -18,12 +18,10 @@ const InstructorSection = () => {
   return (
     <section className="container mt-10 lg:px-40">
       <h2 className="text-3xl font-semibold mb-10 text-center">
-        <span>Meet Our Professional and</span>
-        <br />
-        <span>Experience Instructors</span>
+        <span>Meet Our Professional <br className="lg:block hidden"/>and Experience Instructors</span>
       </h2>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 px-20 lg:px-0">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 px-4 lg:px-0">
         <InstructorCard
           name="John Doe"
           post="Driving Instructor"

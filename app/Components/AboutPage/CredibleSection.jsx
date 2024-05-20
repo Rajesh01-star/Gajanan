@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FaUserGraduate, FaSmile, FaUsers } from "react-icons/fa";
 
 const StatsCard = ({ icon, title, value }) => {
@@ -26,7 +27,7 @@ const AboutPageHero = () => {
             Our Students Pass the Driving Test
           </h2>
           <button className="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-6 rounded-md">
-            Learn More
+            <Link href={"/services"}>Learn More</Link>
           </button>
         </div>
 

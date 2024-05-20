@@ -1,4 +1,5 @@
-// components/HeroSection.js
+'use client'
+import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
@@ -24,10 +25,18 @@ const HeroSection = () => {
       {/* Right side: Hero image (hidden on smaller screens) */}
       <div className="hidden lg:block lg:w-1/2 mt-8 lg:mt-0 relative">
         <img src="/bg.png" className="" alt="Hero Image" />
-        <img
+        <motion.img
           src="/car.png"
-          className="rounded-lg absolute z-20 right-20 bottom-0"
+          className="rounded-lg absolute z-20 bottom-0"
           alt="Car Image"
+          animate={{
+            x: [-10, 15, -10], // Oscillate between -10px and 10px horizontally
+          }}
+          transition={{
+            repeat: Infinity, // Repeat the animation indefinitely
+            duration: 2, // Duration of each oscillation cycle
+            ease: "linear", // Linear easing for a smooth oscillation
+          }}
         />
       </div>
     </div>

@@ -1,5 +1,5 @@
 // component imports
-import CourseOptionsSection from "../Components/CourseOptionsSection";
+import CourseOptionsSection from "../../public/service/CourseOptionsSection";
 import FAQSection from "../Components/FAQSection";
 import PageHero from "../Components/PageHero";
 import ServicesSection from "../Components/ServicesSection";

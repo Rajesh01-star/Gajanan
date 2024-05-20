@@ -12,8 +12,8 @@ const InputField = ({ type, id, fieldName, placeholder }) => {
 
 const ContactForm = () => {
   return (
-    <div className="container mx-auto lg:px-56 px-10">
-      <h2 className="lg:text-3xl text-2xl font-semibold mb-6 text-center mt-6">
+    <div className="container mx-auto lg:px-56 px-4">
+      <h2 className="lg:text-3xl text-2xl font-semibold mb-6 text-center mt-6 px-4">
         Feel Free to Write Us Anytime
       </h2>
       <form className="flex flex-col space-y-4 px-4 items-center">
