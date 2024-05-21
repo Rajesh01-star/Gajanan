@@ -1,11 +1,39 @@
-// icons import
+'use client'
+import React, { useEffect } from "react";
 import { TbCube } from "react-icons/tb";
-
-import React from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const WhyChooseUs = () => {
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    threshold: 0.2, // Trigger when 20% of the section is in view
+  });
+
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  const fadeInVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        ease: "easeOut",
+      },
+    },
+  };
+
   return (
-    <div
+    <motion.div
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={fadeInVariants}
       className="relative flex flex-col lg:flex-row items-center justify-center mt-10 lg:px-40 px-4"
       style={{ backgroundImage: "url('/bg2.png')" }}
     >
@@ -45,7 +73,7 @@ const WhyChooseUs = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

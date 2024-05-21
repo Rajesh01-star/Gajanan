@@ -5,7 +5,8 @@ const PointerCard = ({ icon, title, description }) => {
     <div className=" bg-white lg:w-[400px] shadow-lg lg:h-full h-32">
       <div className="flex gap-4 h-full">
         {/* Left side */}
-        <div className="lg:w-1/3 w-[20%] bg-[#ff2323] flex justify-center items-center h-full ">
+        <div
+         className="lg:w-1/3 w-[20%] bg-[#ff2323] flex justify-center items-center h-full ">
           {icon}
         </div>
         {/* Right side */}

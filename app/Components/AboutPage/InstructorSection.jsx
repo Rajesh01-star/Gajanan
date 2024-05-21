@@ -1,3 +1,7 @@
+"use client";
+import { useAnimation, motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 import Image from "next/image";
 
 const InstructorCard = ({ name, post, imageUrl }) => {
@@ -15,12 +19,46 @@ const InstructorCard = ({ name, post, imageUrl }) => {
 };
 
 const InstructorSection = () => {
-  return (
-    <section className="container mt-10 lg:px-40">
-      <h2 className="text-3xl font-semibold mb-10 text-center">
-        <span>Meet Our Professional <br className="lg:block hidden"/>and Experience Instructors</span>
-      </h2>
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    triggerOnce: true, // Trigger the animation only once
+    threshold: 0.1, // Adjust as needed
+  });
 
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+  }, [controls, inView]);
+
+  const fadeInVariants = {
+    hidden: { opacity: 0, y: 100 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 50,
+        damping: 20,
+        duration: 0.5,
+      },
+    },
+  };
+
+  return (
+    <motion.section
+      ref={ref}
+      initial="hidden"
+      animate={controls}
+      variants={fadeInVariants}
+      className="container mt-10 lg:px-40"
+    >
+      <h2 className="text-3xl font-semibold mb-10 text-center">
+        <span>
+          Meet Our Professional <br className="lg:block hidden" />
+          and Experienced Instructors
+        </span>
+      </h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 px-4 lg:px-0">
         <InstructorCard
           name="John Doe"
@@ -38,7 +76,7 @@ const InstructorSection = () => {
           imageUrl="/about/instructor3.jpg"
         />
       </div>
-    </section>
+    </motion.section>
   );
 };
 

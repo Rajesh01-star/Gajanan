@@ -6,24 +6,24 @@ const TestimonialSection = () => {
   const testimonials = [
     {
       id: 1,
-      image: "/portrait1.jpg",
-      name: "John Doe",
+      image: "/testimonials/rajnandini.png",
+      name: "Rajnandini Patnaik",
       comment:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ac libero in velit tincidunt vehicula.",
+        "a week ago NEW Driving with DEBASISH SIR was an unparalleled experience, blending skill with patience and wisdom. His guidance transformed every twist and turn into a lesson, making each drive not just about reaching a destination, but about embracing the journey itself. I can't thank him enough for imparting not just driving skills, but also instilling a sense of responsibility",
     },
     {
       id: 2,
-      image: "/portrait2.jpg",
-      name: "Jane Smith",
+      image: "/testimonials/tushar.png",
+      name: "Tushar Sarangi",
       comment:
-        "Nullam fringilla tincidunt urna, id scelerisque dui vehicula ut. Nam imperdiet justo non tortor iaculis.",
+        "The experience with the trainer Mr.Tapas of Gajanan driving school was smooth, the way he guides very calmly is the main thing to learn well for a new driver. Thank you Sir.",
     },
     {
       id: 3,
-      image: "/portrait3.jpg",
-      name: "Mary Doe",
+      image: "/testimonials/mina.png",
+      name: "Minakshi Ghosh",
       comment:
-        "Praesent ullamcorper purus nec nulla commodo, quis vehicula mi gravida. Sed hendrerit lacus id eros consectetur.",
+        "Learnt driving through this driving school, This stands out through their training instructor's  teaching methodology, friendly behavior, timing promptness, etc. Highly recommending this school to learn driving. My instructor abhaya sir is",
     },
   ];
 
@@ -74,7 +74,7 @@ const TestimonialSection = () => {
                 {testimonials[currentSlide].name}
               </h3>
               <p className="text-gray-600 mt-2">
-                {testimonials[currentSlide].comment}
+                {testimonials[currentSlide].comment.substring(0,200)}...
               </p>
             </div>
             <div

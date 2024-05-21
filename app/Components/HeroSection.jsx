@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { motion } from "framer-motion";
 
 const HeroSection = () => {
@@ -9,14 +9,34 @@ const HeroSection = () => {
     >
       {/* Left side: Hero content */}
       <div className="lg:w-1/2 lg:ml-40 sm:ml-10 p-4">
-        <h1 className="sm:w-full text-3xl lg:text-6xl font-bold text-gray-800 mb-4 lg:mb-6 leading-tight">
+        <motion.h1
+          initial={{ x: "-100vw" }}
+          animate={{ x: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 100,
+            damping: 20,
+            duration: 2,
+          }}
+          className="sm:w-full text-3xl lg:text-6xl font-bold text-gray-800 mb-4 lg:mb-6 leading-tight"
+        >
           Unlock Your Potential Behind the Wheel
-        </h1>
-        <p className="lg:w-3/4 sm:w-full text-base lg:text-xl text-gray-600 mb-4 lg:mb-6 leading-relaxed">
+        </motion.h1>
+        <motion.p
+          initial={{ x: "-100vw" }}
+          animate={{ x: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 100,
+            damping: 22,
+            duration: 3,
+          }}
+          className="lg:w-3/4 sm:w-full text-base lg:text-xl text-gray-600 mb-4 lg:mb-6 leading-relaxed"
+        >
           Safety is our top priority. With a focus on defensive driving and
           hazard awareness, we equip our students with the knowledge and skills
           to anticipate and respond to potential dangers on the road.
-        </p>
+        </motion.p>
         <button className="bg-[#ff2323] border border-#ff2323 text-white hover:bg-gray-800 py-2 px-6 rounded-lg transition duration-300 ease-in-out">
           Contact Us
         </button>
@@ -24,18 +44,31 @@ const HeroSection = () => {
 
       {/* Right side: Hero image (hidden on smaller screens) */}
       <div className="hidden lg:block lg:w-1/2 mt-8 lg:mt-0 relative">
-        <img src="/bg.png" className="" alt="Hero Image" />
+        <motion.img
+          src="/bg.png"
+          className=""
+          alt="Hero Image"
+          initial={{ x: "100vw" }}
+          animate={{ x: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 100,
+            damping: 20,
+            duration: 2,
+          }}
+        />
         <motion.img
           src="/car.png"
-          className="rounded-lg absolute z-20 bottom-0"
+          className="absolute z-20 bottom-0"
           alt="Car Image"
+          initial={{ x: "-100vw" }}
           animate={{
-            x: [-10, 15, -10], // Oscillate between -10px and 10px horizontally
+            x: [-20, 20, -20],
           }}
           transition={{
-            repeat: Infinity, // Repeat the animation indefinitely
-            duration: 2, // Duration of each oscillation cycle
-            ease: "linear", // Linear easing for a smooth oscillation
+            repeat: Infinity,
+            duration: 5,
+            ease: "linear",
           }}
         />
       </div>
