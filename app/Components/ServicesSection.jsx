@@ -12,49 +12,49 @@ const ServicesSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Feature 1 */}
           <FeatureCard
-            imageSrc="/service/license.jpg"
+            imageSrc="/serviceImages/license.jpg"
             title="Get Your License with Confidence"
             description="Our driving school offers expert guidance and training for obtaining your driver's license with tailored programs and full support, including LMV, MCWG, and MCWOG licenses."
           />
           {/* Feature 2 */}
           <FeatureCard
-            imageSrc="/service/guideline.jpg"
+            imageSrc="/serviceImages/guideline.jpg"
             title="Navigating Road & Guidelines"
             description="We ensure students thoroughly grasp every road guideline and rule through comprehensive instruction and practical training, ensuring their safety and confidence on the road."
           />
           {/* Feature 3 */}
           <FeatureCard
-            imageSrc="/service/instructor.jpg"
+            imageSrc="/serviceImages/instructor.jpg"
             title="Premium Instructor Training"
             description="Our driving school prides itself on maintaining an elite team of industry-leading instructors, committed to providing top-quality training, guidance, and support."
           />
           {/* Feature 4 */}
           <FeatureCard
-            imageSrc="/service/admission.jpg"
+            imageSrc="/serviceImages/admission.jpg"
             title="Instant Admission Approval"
             description="Experience hassle-free enrollment with our on-spot admission process. Get immediate approval and start your driving journey without delay."
           />
           {/* Feature 5 */}
           <FeatureCard
-            imageSrc="/service/home_pickup.jpg"
+            imageSrc="/serviceImages/home_pickup.jpg"
             title="Convenient Home Pickup"
             description="Say goodbye to commuting hassles! Our driving school offers convenient home pickup services, ensuring you get started on your training right from your doorstep."
           />
           {/* Feature 6 */}
           <FeatureCard
-            imageSrc="/service/basics.jpg"
+            imageSrc="/serviceImages/basics.jpg"
             title="Learn Basic Car Maintenance"
             description="In addition to driving skills, our classes cover essential car maintenance tasks like changing tires, ensuring you're equipped with valuable knowledge to handle common roadside situations confidently."
           />
           {/* Feature 7 */}
           <FeatureCard
-            imageSrc="/service/rental.jpg"
+            imageSrc="/serviceImages/rental.jpg"
             title="Self-Driven Car Rentals"
             description="We offer self-driven car rental services, allowing customers to book vehicles without a driver for their privacy and convenience. Enjoy the freedom to drive on your own terms."
           />
           {/* Feature 8 */}
           <FeatureCard
-            imageSrc="/service/logistics.jpg"
+            imageSrc="/serviceImages/logistics.jpg"
             title="Career & Logistics Services"
             description="We provide comprehensive career services, including assistance with shifting and logistics. Our team helps you move goods from one place to another efficiently and securely."
           />

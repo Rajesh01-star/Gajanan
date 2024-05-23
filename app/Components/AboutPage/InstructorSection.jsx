@@ -51,7 +51,7 @@ const InstructorSection = () => {
       initial="hidden"
       animate={controls}
       variants={fadeInVariants}
-      className="container mt-10 lg:px-40"
+      className="mt-10 lg:px-40"
     >
       <h2 className="text-3xl font-semibold mb-10 text-center">
         <span>
@@ -59,21 +59,31 @@ const InstructorSection = () => {
           and Experienced Instructors
         </span>
       </h2>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 px-4 lg:px-0">
+      <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 px-4 lg:px-0">
         <InstructorCard
           name="John Doe"
           post="Driving Instructor"
-          imageUrl="/about/instructor1.jpg"
+          imageUrl="/aboutImages/instructor1.jpg"
         />
         <InstructorCard
           name="Jane Smith"
           post="Traffic Expert"
-          imageUrl="/about/instructor2.jpg"
+          imageUrl="/aboutImages/instructor2.jpg"
         />
         <InstructorCard
           name="Michael Johnson"
           post="Road Safety Advisor"
-          imageUrl="/about/instructor3.jpg"
+          imageUrl="/aboutImages/instructor3.jpg"
+        />
+        <InstructorCard
+          name="Jane Smith"
+          post="Traffic Expert"
+          imageUrl="/aboutImages/instructor2.jpg"
+        />
+        <InstructorCard
+          name="Michael Johnson"
+          post="Road Safety Advisor"
+          imageUrl="/aboutImages/instructor3.jpg"
         />
       </div>
     </motion.section>

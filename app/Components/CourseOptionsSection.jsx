@@ -8,13 +8,13 @@ import { FaArrowRight, FaRupeeSign } from "react-icons/fa";
 
 const CourseOptionCard = ({ imageUrl, title, description, price, slug }) => {
   return (
-    <div className="max-w-md bg-white shadow-lg rounded-lg overflow-hidden relative">
+    <div className="max-w-md bg-white shadow-lg rounded-lg h-[500px]">
       {/* Cube with price tag */}
       <div className="relative h-64">
-        <Image src={imageUrl} alt={title} layout="fill" objectFit="cover" />
+        <Image src={imageUrl} alt={title} layout="fill" objectFit="cover" className=" rounded-lg"/>
       </div>
       <div className="p-6 px-2">
-        <div className="bg-black text-[#ff2323] h-16 flex items-center justify-center outline outline-offset-4 outline-1">
+        <div className="bg-black text-[#ff2323] h-8 w-fit p-4 flex items-center justify-center outline outline-offset-4 outline-1">
           <span className="font-semibold flex justify-center items-center">
             <FaRupeeSign className="mr-1" />
             {price}
@@ -74,7 +74,7 @@ const CourseOptionsSection = () => {
             Develop Your Driving Skill <br className="hidden lg:block" /> to Join the Course
           </h2>
         </div>
-        <div className="flex-col lg:flex lg:flex-row gap-8">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-4 items-center">
           <CourseOptionCard
             imageUrl="/service/course1.png"
             title="Primary Course"

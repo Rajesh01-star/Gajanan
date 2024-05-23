@@ -1,5 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const HeroSection = () => {
   return (
@@ -38,7 +39,9 @@ const HeroSection = () => {
           to anticipate and respond to potential dangers on the road.
         </motion.p>
         <button className="bg-[#ff2323] border border-#ff2323 text-white hover:bg-gray-800 py-2 px-6 rounded-lg transition duration-300 ease-in-out">
+          <Link href={"/contact"}>
           Contact Us
+          </Link>
         </button>
       </div>
 

@@ -6,21 +6,21 @@ const TestimonialSection = () => {
   const testimonials = [
     {
       id: 1,
-      image: "/testimonials/rajnandini.png",
+      image: "/testimonialImages/rajnandini.png",
       name: "Rajnandini Patnaik",
       comment:
         "a week ago NEW Driving with DEBASISH SIR was an unparalleled experience, blending skill with patience and wisdom. His guidance transformed every twist and turn into a lesson, making each drive not just about reaching a destination, but about embracing the journey itself. I can't thank him enough for imparting not just driving skills, but also instilling a sense of responsibility",
     },
     {
       id: 2,
-      image: "/testimonials/tushar.png",
+      image: "/testimonialImages/tushar.png",
       name: "Tushar Sarangi",
       comment:
         "The experience with the trainer Mr.Tapas of Gajanan driving school was smooth, the way he guides very calmly is the main thing to learn well for a new driver. Thank you Sir.",
     },
     {
       id: 3,
-      image: "/testimonials/mina.png",
+      image: "/testimonialImages/mina.png",
       name: "Minakshi Ghosh",
       comment:
         "Learnt driving through this driving school, This stands out through their training instructor's  teaching methodology, friendly behavior, timing promptness, etc. Highly recommending this school to learn driving. My instructor abhaya sir is",
@@ -63,18 +63,18 @@ const TestimonialSection = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto relative">
           {/* Testimonial Card */}
-          <div className="bg-white rounded-lg overflow-hidden shadow-lg p-10 h-[400px]">
+          <div className="bg-white rounded-lg overflow-hidden shadow-lg p-10 flex flex-col justify-around h-[400px]">
             <img
               src={testimonials[currentSlide].image}
               alt={testimonials[currentSlide].name}
-              className="w-40 h-40 object-cover rounded-full mx-auto mt-8"
+              className="w-40 h-40 object-cover rounded-full mx-auto"
             />
-            <div className="text-center mt-4">
+            <div className="text-center mt-2">
               <h3 className="text-xl font-semibold">
                 {testimonials[currentSlide].name}
               </h3>
               <p className="text-gray-600 mt-2">
-                {testimonials[currentSlide].comment.substring(0,200)}...
+                {testimonials[currentSlide].comment.substring(0,150)}...
               </p>
             </div>
             <div

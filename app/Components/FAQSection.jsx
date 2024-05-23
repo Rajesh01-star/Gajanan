@@ -10,35 +10,30 @@ const FAQSection = () => {
     {
       id: 1,
       question: "What is your cancellation policy?",
-      answer:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget velit turpis.",
+      answer: "You can cancel up to 24 hours before your lesson for a full refund.",
     },
     {
       id: 2,
       question: "How do I book a lesson?",
-      answer:
-        "Nullam at leo nec mauris varius hendrerit. Nullam aliquam eget est at commodo.",
+      answer: "You can book a lesson through our website or by calling us directly.",
     },
     {
       id: 3,
       question: "Are your instructors certified?",
-      answer:
-        "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      answer: "Yes, all our instructors are fully certified and experienced.",
     },
     {
       id: 4,
-      question: "Are your instructors certified?",
-      answer:
-        "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      question: "What vehicles do you use for training?",
+      answer: "We use modern vehicles equipped with the latest safety features.",
     },
     {
       id: 5,
-      question: "Are your instructors certified?",
-      answer:
-        "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.",
+      question: "Do you offer weekend lessons?",
+      answer: "Yes, we offer lessons on weekends to accommodate your schedule.",
     },
-    // Add more FAQs as needed
-  ];
+];
+
 
   return (
     <section className="container mx-auto mt-6 lg:px-40 px-4">

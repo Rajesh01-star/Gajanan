@@ -84,42 +84,42 @@ const Footer = () => {
           {/* Image column */}
           <div className="grid grid-cols-3 gap-2 ">
             <Image
-              src="/footer1.png"
+              src="/footerImages/footer1.png"
               alt="Image 1"
               width={76}
               height={76}
               className="object-cover"
             />
             <Image
-              src="/footer2.png"
+              src="/footerImages/footer2.png"
               alt="Image 2"
               width={76}
               height={76}
               className="object-cover"
             />
             <Image
-              src="/footer3.png"
+              src="/footerImages/footer3.png"
               alt="Image 3"
               width={76}
               height={76}
               className="object-cover"
             />
             <Image
-              src="/footer4.png"
+              src="/footerImages/footer4.png"
               alt="Image 4"
               width={76}
               height={76}
               className="object-cover"
             />
             <Image
-              src="/footer5.png"
+              src="/footerImages/footer5.png"
               alt="Image 5"
               width={76}
               height={76}
               className="object-cover"
             />
             <Image
-              src="/footer6.png"
+              src="/footerImages/footer6.png"
               alt="Image 6"
               width={76}
               height={76}

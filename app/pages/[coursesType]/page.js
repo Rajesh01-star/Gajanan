@@ -26,11 +26,11 @@ export default function CourseType({ params }) {
           />
           <ul className="list-disc list-inside mb-4">{descriptionPoints}</ul>
           {course.slug === "refresher" ? (
-            <div>
-              <span className="border border-[#ff2323] w-fit text-[#ff2323] font-semibold py-2 px-6 rounded-md mr-4">
+            <div className="flex flex-col lg:flex-row gap-4">
+              <span className="border border-[#ff2323] text-[#ff2323] font-semibold  rounded-md p-2 w-40 text-center">
                 Small Car: 6000
               </span>
-              <span className="border border-[#ff2323] w-fit text-[#ff2323] font-semibold py-2 px-6 rounded-md">
+              <span className="border border-[#ff2323] text-[#ff2323] font-semibold rounded-md p-2 w-40 text-center">
                 Big Car: 8000
               </span>
             </div>

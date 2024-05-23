@@ -1,4 +1,8 @@
+'use client'
 import React from "react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
 
 const sections = [
   {
@@ -16,7 +20,7 @@ const sections = [
       
       Today, as I look back, I see a journey filled with challenges, hard work, and immense satisfaction. Our driving school has grown beyond my expectations, touching the lives of countless individuals and making our roads a safer place. This is just the beginning, and the journey continues with each new learner who walks through our doors.
     `,
-    imageSrc: "/images/engineer.jpg",
+    imageSrc: "https://picsum.photos/200/300",
   },
   // Add more sections as needed
   {
@@ -30,7 +34,7 @@ const sections = [
       
       We are proud to see our graduates driving responsibly, with confidence and awareness. The feedback from our community highlights the positive impact of our approach, reinforcing our commitment to safety and excellence in driving education.
     `,
-    imageSrc: "/images/safety.jpg",
+    imageSrc: "https://picsum.photos/200/300",
   },
   {
     title: "Our Commitment to Service",
@@ -41,7 +45,7 @@ const sections = [
       
       We aim to build long-lasting relationships with our students, ensuring they feel valued and supported throughout their learning journey and beyond. This commitment to service and satisfaction drives everything we do.
     `,
-    imageSrc: "/images/service.jpg",
+    imageSrc: "https://picsum.photos/200/300",
   },
   {
     title: "Thriving on Trust",
@@ -54,7 +58,7 @@ const sections = [
       
       Our commitment to trust extends beyond the classroom. We foster open communication, actively seek feedback, and continuously improve our services based on the needs and expectations of our community. By building trust with each interaction, we create lasting relationships that form the foundation of our driving school's success.
     `,
-    imageSrc: "/images/trust.jpg",
+    imageSrc: "https://picsum.photos/200/300",
   },
   {
     title: "Driving Initiatives for Positive Change",
@@ -67,9 +71,19 @@ const sections = [
       
       Through our collective efforts with the RTO and other stakeholders, we strive to create a safer and more sustainable environment on the roads. By promoting awareness, education, and positive behavioral change, we contribute to building a safer future for all road users.
     `,
-    imageSrc: "/images/initiatives.jpg",
+    imageSrc: "https://picsum.photos/200/300",
   },
 ];
+
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 3000
+};
 
 const Story = () => {
   return (
@@ -101,6 +115,20 @@ const Story = () => {
           </div>
         </div>
       ))}
+      <div className="mt-12">
+        <h2 className="text-2xl font-semibold text-center mb-8">Our Journey in Pictures</h2>
+        <Slider {...settings} className="w-full">
+          {sections.map((section, index) => (
+            <div key={index} className="h-[800px]">
+              <img
+                src={section.imageSrc}
+                alt={section.title}
+                className="w-full h-full object-contain"
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 };
