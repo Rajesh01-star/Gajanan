@@ -1,4 +1,5 @@
 import PageHero from "@/app/Components/PageHero";
+import Link from "next/link";
 
 export default function CourseType({ params }) {
   const { coursesType } = params;
@@ -27,17 +28,35 @@ export default function CourseType({ params }) {
           <ul className="list-disc list-inside mb-4">{descriptionPoints}</ul>
           {course.slug === "refresher" ? (
             <div className="flex flex-col lg:flex-row gap-4">
-              <span className="border border-[#ff2323] text-[#ff2323] font-semibold  rounded-md p-2 w-40 text-center">
+              <Link
+                href={{
+                  pathname: "/contact",
+                  query: { course: course.slug },
+                }}
+                className="border border-[#ff2323] text-[#ff2323] font-semibold  rounded-md p-2 w-40 text-center"
+              >
                 Small Car: 6000
-              </span>
-              <span className="border border-[#ff2323] text-[#ff2323] font-semibold rounded-md p-2 w-40 text-center">
+              </Link>
+              <Link
+                href={{
+                  pathname: "/contact",
+                  query: { course: course.slug },
+                }}
+                className="border border-[#ff2323] text-[#ff2323] font-semibold rounded-md p-2 w-40 text-center"
+              >
                 Big Car: 8000
-              </span>
+              </Link>
             </div>
           ) : (
-            <p className="border border-[#ff2323] w-fit text-[#ff2323] font-semibold py-2 px-6 rounded-md">
+            <Link
+              href={{
+                pathname: "/contact",
+                query: { course: course.slug },
+              }}
+              className="border border-[#ff2323] w-fit text-[#ff2323] font-semibold py-2 px-6 rounded-md"
+            >
               Price: ${course.price}
-            </p>
+            </Link>
           )}
         </main>
       )}
@@ -51,7 +70,7 @@ const courses = [
     price: 4500,
     description:
       "Our Primary Course is designed for new learners and focuses on hatchback vehicles. Over 21 days, you will receive 15 days of practical training, with daily 30-minute driving sessions, and 6 days of theory classes held every Sunday. This comprehensive course ensures you gain both practical driving skills and essential theoretical knowledge to drive safely and confidently.",
-    imageUrl: "/service/course1.png",
+    imageUrl: "/serviceImages/course1.png",
     title: "Primary Course",
   },
   {
@@ -59,7 +78,7 @@ const courses = [
     price: 4500,
     description:
       "Our Secondary Course is perfect for those who have some driving experience but want to improve their skills. Over 15 days, you will receive 8 days of practical training with 1-hour sessions and 7 theory classes, focusing on hatchback vehicles. This course is designed to enhance your driving proficiency and road safety knowledge.",
-    imageUrl: "/service/course2.png",
+    imageUrl: "/serviceImages/course2.png",
     title: "Secondary Course",
   },
   {
@@ -67,7 +86,7 @@ const courses = [
     price: 6000,
     description:
       "Our Premium Course offers an in-depth driving experience with a focus on SUV vehicles. Over 21 days, you will receive 15 days of practical training, with daily 30-minute driving sessions, and 6 days of theory classes held every Sunday. This course provides advanced driving techniques and comprehensive knowledge for a confident driving experience.",
-    imageUrl: "/service/course3.jpg",
+    imageUrl: "/serviceImages/course3.jpg",
     title: "Premium Course",
   },
   {
@@ -78,7 +97,7 @@ const courses = [
     },
     description:
       "Our Refresher Course is ideal for licensed drivers who want to refresh their driving skills. This 10-day course includes 1-hour daily practical sessions. The price varies depending on the vehicle type: 6000 for small cars and 8000 for big cars. Perfect for regaining confidence on the road.",
-    imageUrl: "/service/course4.jpg",
+    imageUrl: "/serviceImages/course4.jpg",
     title: "Refresher Course",
   },
 ];

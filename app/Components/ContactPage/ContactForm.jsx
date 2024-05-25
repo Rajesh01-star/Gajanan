@@ -1,13 +1,15 @@
 "use client";
 
 import { useForm, ValidationError } from "@formspree/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 
 const ContactForm = () => {
   const [state, handleSubmit] = useForm("mnqeybvk");
   const [selectedCourse, setSelectedCourse] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const searchParams = useSearchParams();
   const router = useRouter();
 
   const handleCourseChange = (e) => {
@@ -22,6 +24,13 @@ const ContactForm = () => {
   if (state.succeeded && !isModalOpen) {
     setIsModalOpen(true);
   }
+
+  useEffect(() => {
+    const course = searchParams.get('course');
+    if (course) {
+      setSelectedCourse(course);
+    }
+  }, []);
 
   return (
     <div className="container mx-auto lg:px-56 px-4">
@@ -93,8 +102,12 @@ const ContactForm = () => {
       {isModalOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-6 rounded-md shadow-lg w-11/12 md:w-1/3">
-            <h2 className="text-xl font-semibold mb-4">Thank you for contacting us!</h2>
-            <p className="mb-4">We have received your message and will get back to you shortly.</p>
+            <h2 className="text-xl font-semibold mb-4">
+              Thank you for contacting us!
+            </h2>
+            <p className="mb-4">
+              We have received your message and will get back to you shortly.
+            </p>
             <button
               onClick={closeModal}
               className="bg-[#ff2323] text-white py-2 px-4 rounded-md hover:bg-black transition-colors duration-300"
