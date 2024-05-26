@@ -9,7 +9,7 @@ const ContactForm = () => {
   const [state, handleSubmit] = useForm("mnqeybvk");
   const [selectedCourse, setSelectedCourse] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const searchParams = useSearchParams();
+  const searchParams = typeof window !== "undefined" ? useSearchParams() : null; // Conditionally use useSearchParams()
   const router = useRouter();
 
   const handleCourseChange = (e) => {
@@ -26,7 +26,7 @@ const ContactForm = () => {
   }
 
   useEffect(() => {
-    const course = searchParams.get('course');
+    const course = searchParams.get("course");
     if (course) {
       setSelectedCourse(course);
     }
