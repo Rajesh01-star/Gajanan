@@ -1,7 +1,10 @@
+'use client'
 import PageHero from "@/app/Components/PageHero";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function CourseType({ params }) {
+  const router = useRouter();
   const { coursesType } = params;
   const course = courses.find((course) => course.slug === coursesType);
   const descriptionPoints = course.description
@@ -11,6 +14,10 @@ export default function CourseType({ params }) {
         {point}
       </li>
     ));
+
+  const navigate = (name) => {
+    router.push(`/contact?course=${name}`);
+  };
 
   return (
     <>
@@ -48,15 +55,12 @@ export default function CourseType({ params }) {
               </Link>
             </div>
           ) : (
-            <Link
-              href={{
-                pathname: "/contact",
-                query: { course: course.slug },
-              }}
+            <button
+              onClick={() => navigate(`${course.slug}`)}
               className="border border-[#ff2323] w-fit text-[#ff2323] font-semibold py-2 px-6 rounded-md"
             >
               Price: ${course.price}
-            </Link>
+            </button>
           )}
         </main>
       )}

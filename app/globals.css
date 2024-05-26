@@ -75,4 +75,12 @@
     }
   }
 
-  
+  /* globals.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+/* Apply Inter font to the entire document */
+html,
+body {
+  font-family: 'Inter', sans-serif;
+}

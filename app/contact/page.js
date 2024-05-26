@@ -3,16 +3,13 @@ import ContactForm from "../Components/ContactPage/ContactForm";
 import MapSection from "../Components/ContactPage/MapSection";
 import PageHero from "../Components/PageHero";
 import SubHeading from "../Components/SubHeading";
-import { Suspense } from "react";
 
 export default function Contact() {
   return (
     <main>
       <PageHero pageTitle={"Contact Us"} />
       <SubHeading text={"Contact With Us "} />
-      <Suspense fallback={<div>Loading...</div>}>
-        <ContactForm />
-      </Suspense>{" "}
+      <ContactForm />
       <MapSection />
     </main>
   );

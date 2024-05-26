@@ -1,24 +1,14 @@
 "use client";
 
-import { useForm, ValidationError } from "@formspree/react";
+import { useForm } from "@formspree/react";
 import { useEffect, useState } from "react";
-import { useSearchParams } from "next/navigation";
 import { useRouter } from "next/navigation";
 
 const ContactForm = () => {
   const [state, handleSubmit] = useForm("mnqeybvk");
   const [selectedCourse, setSelectedCourse] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const searchParams = useSearchParams();
-
-  useEffect(() => {
-    if (searchParams) {
-      const course = searchParams.get('course');
-      if (course) {
-        setSelectedCourse(course);
-      }
-    }
-  }, [searchParams]);  const router = useRouter();
+  const router = useRouter();
 
   const handleCourseChange = (e) => {
     setSelectedCourse(e.target.value);
@@ -26,19 +16,20 @@ const ContactForm = () => {
 
   const closeModal = () => {
     setIsModalOpen(false);
-    router.push("/"); // Redirect to the home page
+    router.push("/");
   };
 
   if (state.succeeded && !isModalOpen) {
     setIsModalOpen(true);
   }
-
   useEffect(() => {
-    const course = searchParams.get("course");
+    const urlParams = new URLSearchParams(window.location.search);
+    const course = urlParams.get("course");
     if (course) {
       setSelectedCourse(course);
     }
   }, []);
+
 
   return (
     <div className="container mx-auto lg:px-56 px-4">
