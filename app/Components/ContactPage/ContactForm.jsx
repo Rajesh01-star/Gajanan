@@ -9,8 +9,16 @@ const ContactForm = () => {
   const [state, handleSubmit] = useForm("mnqeybvk");
   const [selectedCourse, setSelectedCourse] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const searchParams = typeof window !== "undefined" ? useSearchParams() : null; // Conditionally use useSearchParams()
-  const router = useRouter();
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    if (searchParams) {
+      const course = searchParams.get('course');
+      if (course) {
+        setSelectedCourse(course);
+      }
+    }
+  }, [searchParams]);  const router = useRouter();
 
   const handleCourseChange = (e) => {
     setSelectedCourse(e.target.value);
