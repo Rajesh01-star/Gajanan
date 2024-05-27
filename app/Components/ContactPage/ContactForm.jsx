@@ -2,13 +2,14 @@
 
 import { useForm } from "@formspree/react";
 import {  useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter,useSearchParams } from "next/navigation";
 
-const ContactForm = ({course}) => {
+const ContactForm = () => {
   const [state, handleSubmit] = useForm("mnqeybvk");
   const [selectedCourse, setSelectedCourse] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const router = useRouter();
+  const searchParams = useSearchParams();
 
   const handleCourseChange = (e) => {
     setSelectedCourse(e.target.value);
@@ -25,10 +26,13 @@ const ContactForm = ({course}) => {
 
 
   useEffect(() => {
-    if (course) {
-      setSelectedCourse(course);
+    if (searchParams) {
+      const course = searchParams.get("course");
+      if (course) {
+        setSelectedCourse(course);
+      }
     }
-  }, [course]);
+  }, [searchParams]);
 
   return (
     <div className="container mx-auto lg:px-56 px-4">
