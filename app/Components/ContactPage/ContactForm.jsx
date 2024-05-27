@@ -2,13 +2,14 @@
 
 import { useForm } from "@formspree/react";
 import { useEffect, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useRouter, useParams } from "next/navigation";
 
 const ContactForm = () => {
   const [state, handleSubmit] = useForm("mnqeybvk");
   const [selectedCourse, setSelectedCourse] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const router = useRouter();
+  const params = useParams();
 
   const handleCourseChange = (e) => {
     setSelectedCourse(e.target.value);
@@ -22,11 +23,15 @@ const ContactForm = () => {
   if (state.succeeded && !isModalOpen) {
     setIsModalOpen(true);
   }
+  
   useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const course = urlParams.get("course");
-    if (course) {
-      setSelectedCourse(course);
+    if (typeof window !== "undefined") {
+      const urlParams = new URLSearchParams(window.location.search);
+      const course = urlParams.get("course");
+      console.log(course); // Log the course parameter
+      if (course) {
+        setSelectedCourse(course);
+      }
     }
   }, []);
 

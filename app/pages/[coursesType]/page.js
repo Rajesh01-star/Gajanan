@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import PageHero from "@/app/Components/PageHero";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
@@ -35,24 +35,18 @@ export default function CourseType({ params }) {
           <ul className="list-disc list-inside mb-4">{descriptionPoints}</ul>
           {course.slug === "refresher" ? (
             <div className="flex flex-col lg:flex-row gap-4">
-              <Link
-                href={{
-                  pathname: "/contact",
-                  query: { course: course.slug },
-                }}
-                className="border border-[#ff2323] text-[#ff2323] font-semibold  rounded-md p-2 w-40 text-center"
+              <button
+                onClick={() => navigate(`${course.slug}`)}
+                className="border border-[#ff2323] w-fit text-[#ff2323] font-semibold py-2 px-6 rounded-md"
               >
                 Small Car: 6000
-              </Link>
-              <Link
-                href={{
-                  pathname: "/contact",
-                  query: { course: course.slug },
-                }}
-                className="border border-[#ff2323] text-[#ff2323] font-semibold rounded-md p-2 w-40 text-center"
+              </button>
+              <button
+                onClick={() => navigate(`${course.slug}`)}
+                className="border border-[#ff2323] w-fit text-[#ff2323] font-semibold py-2 px-6 rounded-md"
               >
                 Big Car: 8000
-              </Link>
+              </button>
             </div>
           ) : (
             <button
