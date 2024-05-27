@@ -22,13 +22,13 @@ const ContactForm = () => {
   if (state.succeeded && !isModalOpen) {
     setIsModalOpen(true);
   }
-  useEffect(() => {
-    const urlParams = new URLSearchParams(window.location.search);
-    const course = urlParams.get("course");
-    if (course) {
-      setSelectedCourse(course);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const urlParams = new URLSearchParams(window.location.search);
+  //   const course = urlParams.get("course");
+  //   if (course) {
+  //     setSelectedCourse(course);
+  //   }
+  // }, []);
 
 
   return (
