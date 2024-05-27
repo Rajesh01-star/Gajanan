@@ -1,4 +1,3 @@
-'use client'
 // component imports
 import ContactForm from "../Components/ContactPage/ContactForm";
 import MapSection from "../Components/ContactPage/MapSection";
