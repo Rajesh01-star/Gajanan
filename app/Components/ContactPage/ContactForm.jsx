@@ -1,9 +1,11 @@
+"use client";
+
 import { useForm } from "@formspree/react";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
 const ContactForm = () => {
-  const [state, handleSubmit] = useForm("mnqeybvk"); // Your formspree form ID
+  const [state, handleSubmit] = useForm("mnqeybvk");
   const [selectedCourse, setSelectedCourse] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const router = useRouter();
@@ -17,14 +19,17 @@ const ContactForm = () => {
     router.push("/");
   };
 
-  // Conditional Rendering using useEffect
+  if (state.succeeded && !isModalOpen) {
+    setIsModalOpen(true);
+  }
   useEffect(() => {
-    const isClient = typeof window !== "undefined";
-
-    if (state.succeeded && !isModalOpen && isClient) {
-      setIsModalOpen(true);
+    const urlParams = new URLSearchParams(window.location.search);
+    const course = urlParams.get("course");
+    if (course) {
+      setSelectedCourse(course);
     }
-  }, [state.succeeded, isModalOpen]); // Only re-run on state changes
+  }, []);
+
 
   return (
     <div className="container mx-auto lg:px-56 px-4">
