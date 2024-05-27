@@ -15,7 +15,8 @@ export default function Contact() {
     <main>
       <PageHero pageTitle={"Contact Us"} />
       <SubHeading text={"Contact With Us "} />
-      <Suspense>
+      <Suspense fallback={<div>Loading...</div>}>
+        {" "}
         <ContactForm course={course} />
       </Suspense>
       {/* <MapSection /> */}
