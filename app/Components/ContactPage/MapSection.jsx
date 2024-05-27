@@ -6,16 +6,10 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css"; // Import Leaflet CSS
 
 // Create a custom divIcon using Leaflet's divIcon method
-const markerIcon = L.divIcon({
-  html: `
-    <div style="position: relative; display: flex; flex-direction: column;width:100px; align-items: center;">
-      <span style="background-color: white; padding: 2px 5px; border-radius: 3px; margin-bottom: 5px;">Gajanan Driving School</span>
-      <img src="/marker.png" style="width: 30px; height: 30px;" />
-    </div>
-  `,
-  className: "", // Remove default class to prevent any Leaflet styles
-  iconSize: [30, 42], // Adjust size to include text
-  iconAnchor: [15, 42] // Anchor point of the icon (bottom center)
+const markerIcon = L.icon({
+  iconUrl: "/marker.png",
+  iconSize: [30, 30], // Size of the icon
+  iconAnchor: [15, 42], // Anchor point of the icon (bottom center)
 });
 
 const MapSection = () => {
