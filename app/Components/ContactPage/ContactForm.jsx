@@ -23,12 +23,10 @@ const ContactForm = () => {
     setIsModalOpen(true);
   }
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const urlParams = new URLSearchParams(window.location.search);
-      const course = urlParams.get("course");
-      if (course) {
-        setSelectedCourse(course);
-      }
+    const urlParams = new URLSearchParams(window.location.search);
+    const course = urlParams.get("course");
+    if (course) {
+      setSelectedCourse(course);
     }
   }, []);
 
