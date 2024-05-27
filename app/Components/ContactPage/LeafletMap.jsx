@@ -14,7 +14,7 @@ const markerIcon = L.icon({
 
 const LeafletMap = () => {
   return (
-    <div style={{ height: "400px", width: "100%", position: "relative" }} className="mt-40">
+    <div style={{ height: "400px", width: "100%", position: "relative" }} className="mt-10">
       <MapContainer
         center={[20.2961, 85.8245]} // Latitude and longitude for Bhubaneswar
         zoom={12}

@@ -15,6 +15,7 @@ export default function Contact() {
       <Suspense fallback={<div>Loading...</div>}>
         <ContactForm />
       </Suspense>{" "}
+      <SubHeading text={"Our location"} />
       <MapSection />
     </main>
   );
