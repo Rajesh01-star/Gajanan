@@ -1,5 +1,6 @@
-'use client'
+"use client";
 
+import { Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 // component imports
 import ContactForm from "../Components/ContactPage/ContactForm";
@@ -9,12 +10,14 @@ import SubHeading from "../Components/SubHeading";
 
 export default function Contact() {
   const searchParams = useSearchParams();
-  const course = searchParams.get("course")
+  const course = searchParams.get("course");
   return (
     <main>
       <PageHero pageTitle={"Contact Us"} />
       <SubHeading text={"Contact With Us "} />
-      <ContactForm course={course}/>
+      <Suspense>
+        <ContactForm course={course} />
+      </Suspense>
       {/* <MapSection /> */}
     </main>
   );
