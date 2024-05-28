@@ -1,8 +1,9 @@
-'use client'
+"use client";
 import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
+import PageHero from "../Components/PageHero";
 
 const sections = [
   {
@@ -20,7 +21,7 @@ const sections = [
       
       Today, as I look back, I see a journey filled with challenges, hard work, and immense satisfaction. Our driving school has grown beyond my expectations, touching the lives of countless individuals and making our roads a safer place. This is just the beginning, and the journey continues with each new learner who walks through our doors.
     `,
-    imageSrc: "https://picsum.photos/200/300",
+    imageSrc: "/storyImages/firstImage.webp",
   },
   // Add more sections as needed
   {
@@ -34,7 +35,7 @@ const sections = [
       
       We are proud to see our graduates driving responsibly, with confidence and awareness. The feedback from our community highlights the positive impact of our approach, reinforcing our commitment to safety and excellence in driving education.
     `,
-    imageSrc: "https://picsum.photos/200/300",
+    imageSrc: "/storyImages/secondImage.webp",
   },
   {
     title: "Our Commitment to Service",
@@ -45,7 +46,7 @@ const sections = [
       
       We aim to build long-lasting relationships with our students, ensuring they feel valued and supported throughout their learning journey and beyond. This commitment to service and satisfaction drives everything we do.
     `,
-    imageSrc: "https://picsum.photos/200/300",
+    imageSrc: "/storyImages/thirdImage.webp",
   },
   {
     title: "Thriving on Trust",
@@ -58,7 +59,7 @@ const sections = [
       
       Our commitment to trust extends beyond the classroom. We foster open communication, actively seek feedback, and continuously improve our services based on the needs and expectations of our community. By building trust with each interaction, we create lasting relationships that form the foundation of our driving school's success.
     `,
-    imageSrc: "https://picsum.photos/200/300",
+    imageSrc: "/storyImages/fourthImage.webp",
   },
   {
     title: "Driving Initiatives for Positive Change",
@@ -71,7 +72,7 @@ const sections = [
       
       Through our collective efforts with the RTO and other stakeholders, we strive to create a safer and more sustainable environment on the roads. By promoting awareness, education, and positive behavioral change, we contribute to building a safer future for all road users.
     `,
-    imageSrc: "https://picsum.photos/200/300",
+    imageSrc: "/storyImages/fifthImage.webp",
   },
 ];
 
@@ -82,54 +83,58 @@ const settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 3000
+  autoplaySpeed: 3000,
 };
 
 const Story = () => {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-semibold text-center mb-8">Our Story</h1>
-      {sections.map((section, index) => (
-        <div
-          key={index}
-          className={`flex flex-col md:flex-row items-center mb-12 ${
-            index % 2 === 0 ? "md:flex-row-reverse" : ""
-          }`}
-        >
-          <div className="md:w-1/2 p-4">
-            <h2 className="text-2xl font-semibold mb-4">{section.title}</h2>
-            <div className="space-y-4">
-              {section.description.split("\n").map((desc, i) => (
-                <p key={i} className="text-lg">
-                  {desc}
-                </p>
-              ))}
+    <>
+      <PageHero pageTitle={"Our Story"} />
+      <div className="container mx-auto px-4 py-8">
+        {sections.map((section, index) => (
+          <div
+            key={index}
+            className={`flex flex-col md:flex-row items-center mb-12 ${
+              index % 2 === 0 ? "md:flex-row-reverse" : ""
+            }`}
+          >
+            <div className="md:w-1/2 p-4">
+              <h2 className="text-2xl font-semibold mb-4">{section.title}</h2>
+              <div className="space-y-4">
+                {section.description.split("\n").map((desc, i) => (
+                  <p key={i} className="text-lg">
+                    {desc}
+                  </p>
+                ))}
+              </div>
             </div>
-          </div>
-          <div className="md:w-1/2 p-4">
-            <img
-              src={section.imageSrc}
-              alt={section.title}
-              className="w-full h-auto object-cover rounded-md shadow-lg"
-            />
-          </div>
-        </div>
-      ))}
-      <div className="mt-12">
-        <h2 className="text-2xl font-semibold text-center mb-8">Our Journey in Pictures</h2>
-        <Slider {...settings} className="w-full">
-          {sections.map((section, index) => (
-            <div key={index} className="h-[800px]">
+            <div className="md:w-1/2 p-4">
               <img
                 src={section.imageSrc}
                 alt={section.title}
-                className="w-full h-full object-contain"
+                className="w-full h-auto object-cover rounded-md shadow-lg"
               />
             </div>
-          ))}
-        </Slider>
+          </div>
+        ))}
+        <div className="mt-12">
+          <h2 className="text-2xl font-semibold text-center mb-8">
+            Our Journey in Pictures
+          </h2>
+          <Slider {...settings} className="w-full">
+            {sections.map((section, index) => (
+              <div key={index} className="h-[800px]">
+                <img
+                  src={section.imageSrc}
+                  alt={section.title}
+                  className="w-full h-full object-contain"
+                />
+              </div>
+            ))}
+          </Slider>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

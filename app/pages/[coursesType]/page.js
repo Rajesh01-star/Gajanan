@@ -1,10 +1,24 @@
 "use client";
 import PageHero from "@/app/Components/PageHero";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-export default function CourseType({ params }) {
+const CourseToContactBtn = ({ btnText, navigate }) => {
   const router = useRouter();
+
+  const navigateFun = (name) => {
+    router.push(`/contact?course=${name}`);
+  };
+  return (
+    <button
+      onClick={() => navigateFun(`${navigate}`)}
+      className="border border-[#ff2323] w-fit text-[#ff2323] font-semibold py-2 px-6 rounded-md"
+    >
+      {btnText}
+    </button>
+  );
+};
+
+export default function CourseType({ params }) {
   const { coursesType } = params;
   const course = courses.find((course) => course.slug === coursesType);
   const descriptionPoints = course.description
@@ -14,10 +28,6 @@ export default function CourseType({ params }) {
         {point}
       </li>
     ));
-
-  const navigate = (name) => {
-    router.push(`/contact?course=${name}`);
-  };
 
   return (
     <>
@@ -35,26 +45,21 @@ export default function CourseType({ params }) {
           <ul className="list-disc list-inside mb-4">{descriptionPoints}</ul>
           {course.slug === "refresher" ? (
             <div className="flex flex-col lg:flex-row gap-4">
-              <button
-                onClick={() => navigate(`${course.slug}`)}
-                className="border border-[#ff2323] w-fit text-[#ff2323] font-semibold py-2 px-6 rounded-md"
-              >
-                Small Car: 6000
-              </button>
-              <button
-                onClick={() => navigate(`${course.slug}`)}
-                className="border border-[#ff2323] w-fit text-[#ff2323] font-semibold py-2 px-6 rounded-md"
-              >
-                Big Car: 8000
-              </button>
+              s{" "}
+              <CourseToContactBtn
+                btnText={"Small Car: 6000"}
+                navigate={course.slug}
+              />
+              <CourseToContactBtn
+                btnText={"Big Car: 8000"}
+                navigate={course.slug}
+              />
             </div>
           ) : (
-            <button
-              onClick={() => navigate(`${course.slug}`)}
-              className="border border-[#ff2323] w-fit text-[#ff2323] font-semibold py-2 px-6 rounded-md"
-            >
-              Price: ${course.price}
-            </button>
+            <CourseToContactBtn
+              btnText={`Price: ${course.price}`}
+              navigate={course.slug}
+            />
           )}
         </main>
       )}
