@@ -22,7 +22,21 @@ const TestimonialSection = () => {
       image: "/testimonialImages/Madhav.jpg",
       name: "Madhav Ghosh",
       comment:
+        "Guidance transformed every twist and turn into a lesson, making each drive not just about reaching a destination teaching methodology, friendly behavior, timing promptness, etc. Highly recommending this school to learn driving. My instructor abhaya sir is",
+    },
+    {
+      id: 4,
+      image: "/testimonialImages/kaushik.jpg",
+      name: "Kaushik Rath",
+      comment:
         "Learnt driving through this driving school, This stands out through their training instructor's teaching methodology, friendly behavior, timing promptness, etc. Highly recommending this school to learn driving. My instructor abhaya sir is",
+    },
+    {
+      id: 5,
+      image: "/testimonialImages/ritesh.jpg",
+      name: "Ritesh Kumar",
+      comment:
+        "Driving transformed every twist and turn into a lesson, making each drive not just about reaching a destination teaching methodology, friendly behavior, timing promptness, etc. Highly recommending this school to learn driving. My instructor abhaya sir is",
     },
   ];
 
