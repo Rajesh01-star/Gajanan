@@ -16,7 +16,7 @@ const Navbar = () => {
     <nav className="flex items-center justify-between flex-wrap p-6 px-4 lg:px-10">
       <div className="flex items-center flex-shrink-0 text-gray-800 mr-40">
         <Link href="/">
-          <img src="/logo.svg" className="h-12" alt="Logo" />
+          <img src="/logo.svg" className="h-8" alt="Logo" />
         </Link>
       </div>
       <div className="block lg:hidden">
