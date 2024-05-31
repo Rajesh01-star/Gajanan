@@ -138,7 +138,7 @@ const Footer = () => {
               <span className="mr-4">
                 <MobileIcon color="red" />
               </span>
-              <p>(+91) 9937552281</p>
+              <p>(+91) 9861250600</p>
             </div>
             <div className="flex items-center">
               <span className="mr-4">

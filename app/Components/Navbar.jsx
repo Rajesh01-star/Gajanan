@@ -88,7 +88,7 @@ const Navbar = () => {
           </div>
           <div>
             <Link
-              href="https://api.whatsapp.com/send?phone=1234567890"
+              href="https://api.whatsapp.com/send?phone=9861250600"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block text-md font-medium px-4 py-2 leading-none bg-gray-200 rounded mt-4 lg:mt-0"
