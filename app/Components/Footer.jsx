@@ -15,7 +15,7 @@ const Footer = () => {
         <div className="flex flex-wrap items-center justify-between pb-10 border-b-[1px] border-[#373745]">
           {/* Logo */}
           <div className="flex items-center">
-            <img src="/logo.svg" alt="Logo" className="h-8 mr-4" />
+            <img src="/logo.svg" alt="Logo" className="h-12 mr-4" />
           </div>
           {/* Social Media Links */}
           <div className="flex items-center ">
