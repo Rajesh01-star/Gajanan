@@ -21,7 +21,7 @@ const sections = [
       
       Today, as I look back, I see a journey filled with challenges, hard work, and immense satisfaction. Our driving school has grown beyond my expectations, touching the lives of countless individuals and making our roads a safer place. This is just the beginning, and the journey continues with each new learner who walks through our doors.
     `,
-    imageSrc: "/storyImages/fifthImage.webp",
+    imageSrc: "/storyImages/fifthImage.jpg",
   },
   // Add more sections as needed
   {
@@ -35,7 +35,7 @@ const sections = [
       
       We are proud to see our graduates driving responsibly, with confidence and awareness. The feedback from our community highlights the positive impact of our approach, reinforcing our commitment to safety and excellence in driving education.
     `,
-    imageSrc: "/storyImages/fourthImage.webp",
+    imageSrc: "/storyImages/fourthImage.jpg",
   },
   {
     title: "Our Commitment to Service",
@@ -46,7 +46,7 @@ const sections = [
       
       We aim to build long-lasting relationships with our students, ensuring they feel valued and supported throughout their learning journey and beyond. This commitment to service and satisfaction drives everything we do.
     `,
-    imageSrc: "/storyImages/thirdImage.webp",
+    imageSrc: "/storyImages/thirdImage.jpg",
   },
   {
     title: "Thriving on Trust",
@@ -59,7 +59,7 @@ const sections = [
       
       Our commitment to trust extends beyond the classroom. We foster open communication, actively seek feedback, and continuously improve our services based on the needs and expectations of our community. By building trust with each interaction, we create lasting relationships that form the foundation of our driving school's success.
     `,
-    imageSrc: "/storyImages/secondImage.webp",
+    imageSrc: "/storyImages/secondImage.jpg",
   },
   {
     title: "Driving Initiatives for Positive Change",
@@ -72,7 +72,7 @@ const sections = [
       
       Through our collective efforts with the RTO and other stakeholders, we strive to create a safer and more sustainable environment on the roads. By promoting awareness, education, and positive behavioral change, we contribute to building a safer future for all road users.
     `,
-    imageSrc: "/storyImages/firstImage.webp",
+    imageSrc: "/storyImages/firstImage.jpg",
   },
 ];
 
