@@ -2,15 +2,20 @@
 import PageHero from "@/app/Components/PageHero";
 import { useRouter } from "next/navigation";
 
-const CourseToContactBtn = ({ btnText, navigate }) => {
+const CourseToContactBtn = ({ btnText, navigate, isPaymentBtn = false }) => {
   const router = useRouter();
 
-  const navigateFun = (name) => {
-    router.push(`/contact?course=${name}`);
+  const handleClick = () => {
+    if (isPaymentBtn) {
+      window.location.href = "https://smartpay.easebuzz.in/160419/373bb43f1ffb45a7abc6d26f87f61cfc";
+    } else {
+      router.push(`/contact?course=${navigate}`);
+    }
   };
+
   return (
     <button
-      onClick={() => navigateFun(`${navigate}`)}
+      onClick={handleClick}
       className="border border-[#ff2323] w-fit text-[#ff2323] font-semibold py-2 px-6 rounded-md"
     >
       {btnText}
@@ -45,7 +50,6 @@ export default function CourseType({ params }) {
           <ul className="list-disc list-inside mb-4">{descriptionPoints}</ul>
           {course.slug === "refresher" ? (
             <div className="flex flex-col lg:flex-row gap-4">
-              s{" "}
               <CourseToContactBtn
                 btnText={"Small Car: 6000"}
                 navigate={course.slug}
@@ -54,12 +58,22 @@ export default function CourseType({ params }) {
                 btnText={"Big Car: 8000"}
                 navigate={course.slug}
               />
+              <CourseToContactBtn
+                btnText={"Pay Now"}
+                isPaymentBtn={true}
+              />
             </div>
           ) : (
-            <CourseToContactBtn
-              btnText={`Price: ${course.price}`}
-              navigate={course.slug}
-            />
+            <div className="flex flex-col lg:flex-row gap-4">
+              <CourseToContactBtn
+                btnText={`Price: ${course.price}`}
+                navigate={course.slug}
+              />
+              <CourseToContactBtn
+                btnText={"Pay Now"}
+                isPaymentBtn={true}
+              />
+            </div>
           )}
         </main>
       )}
